@@ -10,7 +10,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS1'], os.environ['ALLOWED_HOSTS2'], 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
