@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <title>{% block title %}Echo Scribe{% endblock %}</title>
+  <link rel="shortcut icon" href="{% static 'icons/icon.svg' %}" type="image/svg">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js">
+    $(document).ready(function () {
+      console.log("jQuery initialized.");
+    });
+  </script>
+</head>
+<body>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
