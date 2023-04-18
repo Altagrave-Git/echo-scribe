@@ -24,7 +24,7 @@ jobs:
         appfile=$(find ~/scribe-runner -type f -name "*manage.py")
         appdir=$(dirname $appfile)
         cd $appdir
-        echo "${{ secrets.SCRIBE_ENV }}" > echo/.env
+        echo "${{ secrets.SCRIBE_ENV }}" > scribe/.env
         virtualenv scribe-env
         source scribe-env/bin/activate
         pip install -r requirements.txt
