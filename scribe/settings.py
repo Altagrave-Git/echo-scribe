@@ -35,6 +35,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'scribe.urls'
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
