@@ -104,5 +104,3 @@ else:
     MEDIA_ROOT = '/media/'
 
 LOGIN_REDIRECT_URL = '/'
-
-SESSION_COOKIE_NAME='client_sessionid'
