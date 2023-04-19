@@ -12,7 +12,7 @@ class CustomAdapter(OAuth2Adapter):
     profile_url = '{}/profile/'.format(settings.OAUTH_SERVER_BASEURL)
 
     # Accessed by the user browser, must be reachable by the host
-    authorize_url = '{}/o/authorize/'.format(settings.OAUTH_SERVER_BASEURL)
+    authorize_url = '{}/o/authorize/'.format('https://echonetwork.app')
 
     # NOTE: trailing slashes in URLs are important, don't miss it
 
