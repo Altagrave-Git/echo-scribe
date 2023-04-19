@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'customprovider.apps.CustomproviderConfig',
+    'customprovider',
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
