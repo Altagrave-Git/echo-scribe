@@ -10,7 +10,7 @@ class CustomAccount(ProviderAccount):
 class CustomProvider(OAuth2Provider):
 
     id = 'customprovider'
-    name = 'Echo'
+    name = 'My Custom oAuth Provider'
     account_class = CustomAccount
 
     def extract_uid(self, data):
@@ -26,5 +26,6 @@ class CustomProvider(OAuth2Provider):
         scope = ['read']
         return scope
 
+provider_classes=[CustomProvider]
 
 providers.registry.register(CustomProvider)
