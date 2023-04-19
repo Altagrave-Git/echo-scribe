@@ -119,4 +119,3 @@ if DEBUG:
 else:
     MEDIA_ROOT = '/media/'
 
-LOGIN_REDIRECT_URL = '/'
