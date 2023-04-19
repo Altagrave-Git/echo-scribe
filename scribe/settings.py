@@ -13,6 +13,7 @@ DEBUG = False
 ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS1'], os.environ['ALLOWED_HOSTS2'], 'localhost']
 
 INSTALLED_APPS = [
+    'web.apps.WebConfig',
     'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -76,6 +77,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHLIB_OAUTH_CLIENTS = {
+    'toolkit': {
+        'client_id': os.environ['TOOLKIT_SERVER_CLIENT_ID'],
+        'client_secret': os.environ['TOOLKIT_SERVER_CLIENT_SECRET'],
+        'server_metadata_url': 'https://echonetwork.app/o/.well-known/openid-configuration/',
+        'client_kwargs': {'scope': 'read write openid'},
+        'revoke_url': 'https://echonetwork.app/o/revoke_token',
+    },
+}
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -103,3 +114,7 @@ else:
     MEDIA_ROOT = '/media/'
 
 LOGIN_REDIRECT_URL = '/'
+
+SESSION_COOKIE_NAME='client_sessionid'
+
+AUTH_USER_MODEL = 'web.CustomUser'
